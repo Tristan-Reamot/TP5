@@ -32,7 +32,7 @@ public class Employe {
 
     public double salaireBrut() {
         double resultat;
-        return  resultat = base * nbHeures * 1.05;
+        return  resultat = base * nbHeures;
     }
 
     public double salaireNet() {

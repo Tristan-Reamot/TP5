@@ -1,5 +1,4 @@
-public class EmployeBuilder {
-
+public class TechnicienBuilder {
     private int numSecu;
     private String nom;
     private String prenom;
@@ -7,37 +6,37 @@ public class EmployeBuilder {
     private double base;
     private double nbHeures;
 
-    public EmployeBuilder setNumSecu(int numSecu) {
+    public TechnicienBuilder setNumSecu(int numSecu) {
         this.numSecu = numSecu;
         return this;
     }
 
-    public EmployeBuilder setNom(String nom) {
+    public TechnicienBuilder setNom(String nom) {
         this.nom = nom;
         return this;
     }
 
-    public EmployeBuilder setPrenom(String prenom) {
+    public TechnicienBuilder setPrenom(String prenom) {
         this.prenom = prenom;
         return this;
     }
 
-    public EmployeBuilder setEchelon(int echelon) {
+    public TechnicienBuilder setEchelon(int echelon) {
         this.echelon = echelon;
         return this;
     }
 
-    public EmployeBuilder setBase(double base) {
+    public TechnicienBuilder setBase(double base) {
         this.base = base;
         return this;
     }
 
-    public EmployeBuilder setNbHeures(double nbHeures) {
+    public TechnicienBuilder setNbHeures(double nbHeures) {
         this.nbHeures = nbHeures;
         return this;
     }
 
-    public Employe createEmploye() {
-        return new Employe(numSecu, nom, prenom, echelon, base, nbHeures);
+    public Technicien createTechnicien() {
+        return new Technicien(numSecu, nom, prenom, echelon, base, nbHeures);
     }
 }

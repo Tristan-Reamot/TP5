@@ -4,35 +4,44 @@ public class GestionEmployes {
 
     public static void main(String[] args){
 
-        Employe riri = new EmployeBuilder()
+        Employe riri = new CommercialBuilder()
                 .setNumSecu(12345)
                 .setNom("Alpha")
                 .setPrenom("Riri")
                 .setEchelon(1)
-                .setBase(10)
+                .setBase(18)
                 .setNbHeures(151)
-                .createEmploye();
+                .setChiffreAffaires(500)
+                .setTauxCommission(8.0)
+                .createCommercial();
 
-        Employe fifi = new EmployeBuilder()
+        Employe fifi = new FabricantBuilder()
                 .setNumSecu(6789)
                 .setNom("Beta")
                 .setPrenom("Fifi")
                 .setEchelon(2)
-                .setBase(15)
+                .setBase(10)
                 .setNbHeures(151)
-                .createEmploye();
+                .setNbUnitesProduites(80)
+                .setTauxCommissionUnite(7)
+                .createFabricant();
 
-        Employe loulou = new EmployeBuilder()
+        Employe loulou = new TechnicienBuilder()
                 .setNumSecu(13579)
                 .setNom("Delta")
                 .setPrenom("Loulou")
                 .setEchelon(3)
-                .setBase(20)
+                .setBase(25)
                 .setNbHeures(151)
-                .createEmploye();
+                .createTechnicien();
 
         System.out.println(riri);
         System.out.println(fifi);
         System.out.println(loulou);
+
+        ((Commercial) riri).negocierTransaction();
+        ((Fabricant) fifi).fabriquerProduit();
+        ((Technicien) loulou).effectuerTacheTechnique();
+
     }
 }
