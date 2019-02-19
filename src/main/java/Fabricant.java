@@ -12,4 +12,10 @@ public class Fabricant extends Employe {
     public void fabriquerProduit(){
         System.out.println("Je fabrique un produit !");
     }
+
+    @Override
+    public double salaireBrut() {
+        double resultat;
+        return resultat = super.salaireBrut() + nbUnitesProduites * tauxCommissionUnite;
+    }
 }

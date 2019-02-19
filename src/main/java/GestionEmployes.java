@@ -8,7 +8,7 @@ public class GestionEmployes {
                 .setNumSecu(12345)
                 .setNom("Alpha")
                 .setPrenom("Riri")
-                .setEchelon(1)
+                .setEchelon(2)
                 .setBase(18)
                 .setNbHeures(151)
                 .setChiffreAffaires(500)
@@ -19,7 +19,7 @@ public class GestionEmployes {
                 .setNumSecu(6789)
                 .setNom("Beta")
                 .setPrenom("Fifi")
-                .setEchelon(2)
+                .setEchelon(1)
                 .setBase(10)
                 .setNbHeures(151)
                 .setNbUnitesProduites(80)
@@ -35,13 +35,13 @@ public class GestionEmployes {
                 .setNbHeures(151)
                 .createTechnicien();
 
-        System.out.println(riri);
-        System.out.println(fifi);
-        System.out.println(loulou);
-
         ((Commercial) riri).negocierTransaction();
         ((Fabricant) fifi).fabriquerProduit();
         ((Technicien) loulou).effectuerTacheTechnique();
+
+        System.out.println(loulou);
+        System.out.println(riri);
+        System.out.println(fifi);
 
     }
 }

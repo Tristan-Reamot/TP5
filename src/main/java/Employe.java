@@ -30,6 +30,14 @@ public class Employe {
                 '}';
     }
 
+    public int getEchelon() {
+        return echelon;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
     public double salaireBrut() {
         double resultat;
         return  resultat = base * nbHeures;

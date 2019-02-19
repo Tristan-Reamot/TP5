@@ -12,4 +12,10 @@ public class Commercial extends Employe {
     public void negocierTransaction(){
         System.out.println("Je négocie une transaction !");
     }
+
+    @Override
+    public double salaireBrut() {
+        double resultat;
+        return resultat = this.getBase() + chiffreAffaires * tauxCommission;
+    }
 }
