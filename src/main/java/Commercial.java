@@ -1,4 +1,4 @@
-public class Commercial extends Employe {
+public abstract class Commercial extends Employe {
 
     private double chiffreAffaires;
     private double tauxCommission;
@@ -16,6 +16,7 @@ public class Commercial extends Employe {
     @Override
     public double salaireBrut() {
         double resultat;
-        return resultat = this.getBase() + chiffreAffaires * tauxCommission;
+        return resultat = this.getBase() + 100 + chiffreAffaires * tauxCommission;
     }
+
 }

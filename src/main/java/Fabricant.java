@@ -18,4 +18,5 @@ public class Fabricant extends Employe {
         double resultat;
         return resultat = super.salaireBrut() + nbUnitesProduites * tauxCommissionUnite;
     }
+
 }

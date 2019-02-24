@@ -38,13 +38,18 @@ public class Employe {
         return base;
     }
 
+    public double getNbHeures() {
+        return nbHeures;
+    }
+
     public double salaireBrut() {
         double resultat;
-        return  resultat = base * nbHeures;
+        return  resultat = base * nbHeures + 100;
     }
 
     public double salaireNet() {
         double resultat;
         return resultat = salaireBrut() * 80 / 100;
     }
+
 }

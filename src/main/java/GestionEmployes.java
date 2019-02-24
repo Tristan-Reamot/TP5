@@ -1,10 +1,8 @@
-import java.sql.SQLOutput;
-
 public class GestionEmployes {
 
     public static void main(String[] args){
 
-        Employe riri = new CommercialBuilder()
+        Employe riri = new VendeurBuilder()
                 .setNumSecu(12345)
                 .setNom("Alpha")
                 .setPrenom("Riri")
@@ -13,7 +11,7 @@ public class GestionEmployes {
                 .setNbHeures(151)
                 .setChiffreAffaires(500)
                 .setTauxCommission(8.0)
-                .createCommercial();
+                .createVendeur();
 
         Employe fifi = new FabricantBuilder()
                 .setNumSecu(6789)
@@ -35,13 +33,27 @@ public class GestionEmployes {
                 .setNbHeures(151)
                 .createTechnicien();
 
-        ((Commercial) riri).negocierTransaction();
+        Employe donald = new RepresentantBuilder()
+                .setNumSecu(99999)
+                .setNom("Gamma")
+                .setPrenom("Donald")
+                .setEchelon(3)
+                .setBase(25)
+                .setNbHeures(151)
+                .setChiffreAffaires(500)
+                .setTauxCommission(8.0)
+                .createRepresentant();
+
+        ((Vendeur) riri).negocierTransaction();
         ((Fabricant) fifi).fabriquerProduit();
         ((Technicien) loulou).effectuerTacheTechnique();
+        ((Representant) donald).negocierTransaction();
 
         System.out.println(loulou);
         System.out.println(riri);
         System.out.println(fifi);
+        System.out.println(donald);
 
     }
+
 }

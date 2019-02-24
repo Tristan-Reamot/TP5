@@ -13,4 +13,5 @@ public class Technicien extends Employe {
         double resultat;
         return resultat = super.salaireBrut() + this.getEchelon() * 100;
     }
+
 }

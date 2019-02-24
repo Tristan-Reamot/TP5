@@ -1,4 +1,4 @@
-public class CommercialBuilder {
+public class RepresentantBuilder {
     private int numSecu;
     private String nom;
     private String prenom;
@@ -8,47 +8,47 @@ public class CommercialBuilder {
     private double chiffreAffaires;
     private double tauxCommission;
 
-    public CommercialBuilder setNumSecu(int numSecu) {
+    public RepresentantBuilder setNumSecu(int numSecu) {
         this.numSecu = numSecu;
         return this;
     }
 
-    public CommercialBuilder setNom(String nom) {
+    public RepresentantBuilder setNom(String nom) {
         this.nom = nom;
         return this;
     }
 
-    public CommercialBuilder setPrenom(String prenom) {
+    public RepresentantBuilder setPrenom(String prenom) {
         this.prenom = prenom;
         return this;
     }
 
-    public CommercialBuilder setEchelon(int echelon) {
+    public RepresentantBuilder setEchelon(int echelon) {
         this.echelon = echelon;
         return this;
     }
 
-    public CommercialBuilder setBase(double base) {
+    public RepresentantBuilder setBase(double base) {
         this.base = base;
         return this;
     }
 
-    public CommercialBuilder setNbHeures(double nbHeures) {
+    public RepresentantBuilder setNbHeures(double nbHeures) {
         this.nbHeures = nbHeures;
         return this;
     }
 
-    public CommercialBuilder setChiffreAffaires(double chiffreAffaires) {
+    public RepresentantBuilder setChiffreAffaires(double chiffreAffaires) {
         this.chiffreAffaires = chiffreAffaires;
         return this;
     }
 
-    public CommercialBuilder setTauxCommission(double tauxCommission) {
+    public RepresentantBuilder setTauxCommission(double tauxCommission) {
         this.tauxCommission = tauxCommission;
         return this;
     }
 
-    public Commercial createCommercial() {
-        return new Commercial(numSecu, nom, prenom, echelon, base, nbHeures, chiffreAffaires, tauxCommission);
+    public Representant createRepresentant() {
+        return new Representant(numSecu, nom, prenom, echelon, base, nbHeures, chiffreAffaires, tauxCommission);
     }
 }
